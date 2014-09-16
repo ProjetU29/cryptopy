@@ -1,0 +1,46 @@
+-----------------------------------------------------------------------------
+|																			|
+|							CRYPTOGRAPHIE ANCIENNE							|
+|																			|
+-----------------------------------------------------------------------------
+
+Transposition :
+	- Dents de scie
+	- Bloc
+	- Colonnes
+	- UBCHI
+	- Grille de Fleissner
+	- Transposition triangulaire
+
+Substitution :
+	- Code César
+	- Atbash
+	- Le morse
+	- Le carré de Polybe
+	- Code Chappe
+	- Simple clé
+	- Chiffre de Bazeries
+	- Simple
+	- Système d'Alberti
+	- Carré de 25
+	- Renversement desfréquances
+	- Le chiffre de Playfair
+	- Le chiffrement à trois carrés
+	- Chiffre :
+		- Hill
+		- Polux
+		- Collon
+		- Delastelle
+	- Chiffrement ADFGVX
+	- Système :
+		- Porta
+		- Figenere
+		- Beaufort
+		- Gronsfeld
+		- double clé quelconque
+	- Clé variable
+
+Machine de chiffrement :
+	- Cadran d'Alberti
+	- Cylindre de Jefferson
+	- Machine Enigma
