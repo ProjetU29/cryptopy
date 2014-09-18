@@ -1,3 +1,8 @@
 - use argparse for argument passing to the script
  _https://docs.python.org/2/library/argparse.html#module-argparse
 
+- cipher blocs transposition : 
+    _make sure double letters does not breack down the thing
+    _take care how to split better the message regarding the key
+    _split and print the cyphered message in randomm sized blocs
+
