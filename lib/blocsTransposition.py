@@ -33,27 +33,21 @@ class BlocsTransposition:
         
         i = 1
         t = []
+        c = []
         while i<=loops:
             t.append(self.m[((i-1)*sizeK):((i-1)*sizeK+sizeK)])
+            print "t[i-1] :"
             print t[i-1]
+
+            print "----------------------------------"
+            ti = t[i-1]
+
+            j=0
+            while j<len(self.k):
+                c.append(ti[r[j]-1])
+                j = j+1
+            print c
             i = i+1
-
-        print "----------------------------------"
-        print r
-        print t[0]
-        t0=t[0]
-        print "t0 est :"+t0
-        r0=r[0]-1
-        print "r0 est :"
-        print r0
-
-        for j in t0:
-            print t0[r0]
-
-        #### j=0
-        #### while j<=self.k:
-        ####     f = r[j]
-        ####     j = j+1
 
 x = BlocsTransposition("loick","monmessageestunpoeme")
 #x.sortAlpha()
