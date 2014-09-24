@@ -5,7 +5,7 @@ import os, sys
 # Old method
 # transposition
 # Ceasar Cipher
-# in french : "Code de César"
+# in french : "Code de Cesar"
 
 class CaesarChipher:
 	"""docstring for CaesarChipher"""
