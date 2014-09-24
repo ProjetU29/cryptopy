@@ -25,7 +25,6 @@ class BlocsTransposition:
 
 
     def splitMsg(self):
-        print self.m
         sizeK = len(self.k)
         sizeM = len(self.m)
         loops = sizeM/sizeK
@@ -36,19 +35,33 @@ class BlocsTransposition:
         c = []
         while i<=loops:
             t.append(self.m[((i-1)*sizeK):((i-1)*sizeK+sizeK)])
-            print "t[i-1] :"
-            print t[i-1]
-
-            print "----------------------------------"
             ti = t[i-1]
 
             j=0
             while j<len(self.k):
                 c.append(ti[r[j]-1])
                 j = j+1
-            print c
             i = i+1
+        return c
+
+    def printRandomSize(self):
+        sm = self.splitMsg()
+
+        i=1
+        sizeR = 10
+        result = []
+        loops = len(self.m)/sizeR
+        while i <= loops:
+            result.append(''.join(sm[((i-1)*sizeR):((i-1)*sizeR+sizeR)]))
+            i = i+1
+        return result
+
+    def resultTranspositon(self):
+        print ' '.join(self.printRandomSize())
+
 
 x = BlocsTransposition("loick","monmessageestunpoeme")
 #x.sortAlpha()
-x.splitMsg()
+#x.splitMsg()
+#x.printRandomSize()
+x.resultTranspositon()
