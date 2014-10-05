@@ -50,6 +50,7 @@ class ColumnTransposition(object):
 				tempMessage += r[x+1][y]
 			temp[y].append(tempMessage)
 			tempMessage = ""
+		print "Avant transposition"
 		print temp
 		for x in range(len(self.key)):
 			self.result[int(r[0][x])-1] = (temp[x])
@@ -60,41 +61,26 @@ class ColumnTransposition(object):
 		j = 1
 		ligne = 0
 		caseAjouter = 0
+		# Nombre de ligne
 		while ((ligne * len(self.key)) != len(self.message)):
 			ligne += 1
-
+		print ligne-1
+		# En decoupe le texte et on le met dans des cases
 		for i in range(len(self.key)):
 			tempMessage = ""
 			r.append([])
-			for x in range(ligne-1):
-				tempMessage += self.message[3*i+x]
+			for x in range(ligne):
+				tempMessage += self.message[ligne*i+x]
 			r[j].append(tempMessage)
 			j = j+1
-		print r
-		self.result = []
-		self.result.append([])
-		for x in range(len(self.key)-1):
-			self.result.append([])
-		for x in range(len(self.key)):
-			self.result[int(r[0][x])-1] = r[x+1]
-		print self.result
-		tempMessage = ""
-		for y in range(len(self.key)):
-			for x in range(ligne-1):
-				tempMessage += self.result[y][0][x]
+		# Concatenation into self.result
 		self.result = ""
-		for i in range(len(self.key)+3):
-			for x in range(ligne-1):
-				if (i%ligne == 0):
-					self.result += tempMessage[ligne*x]
-				if (i%ligne == 1):
-					self.result += tempMessage[ligne*x+1]
-				if (i%ligne == 2):
-					self.result += tempMessage[ligne*x+2]
-		print self.result
-
+		for x in range(ligne):
+			for y in range(len(self.key)):
+				self.result += r[r[0][y]][0][x]
 
 	def show(self):
+		print "Self.result"
 		print self.result
 
 # TEST FOR ENCODE #
@@ -102,6 +88,8 @@ w = ColumnTransposition("PERMVTAUION", "RENDEZ VOUS A MIDI PLACE DE LA LIBERTE")
 w.encrypt()
 w.show()
 # TEST FOR DECODE #
-x = ColumnTransposition("PERMVTAUION", "VAREIAUEEDIIAE.SD.RMLNDLZLEOCTEPBAA")
+print "----------------------------------------------------"
+#x = ColumnTransposition("PERMVTAUION", "VAREIAUEEDIIAE.SD.RMLNDLZLEOCTEPB")
+x = ColumnTransposition("BANANE", "AEFBCEENJHFAECOLUILRAACAQ")
 x.decrypt()
-#x.show()
+x.show()
