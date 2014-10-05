@@ -38,6 +38,7 @@ class ColumnTransposition(object):
 				ligne = ligne + 1
 				j = j+1
 			r[j].append(self.message[i])
+		print r
 		temp = []
 		self.result = []
 		for x in range(len(self.key)):
@@ -49,12 +50,50 @@ class ColumnTransposition(object):
 				tempMessage += r[x+1][y]
 			temp[y].append(tempMessage)
 			tempMessage = ""
+		print temp
 		for x in range(len(self.key)):
 			self.result[int(r[0][x])-1] = (temp[x])
 
 	def decrypt(self):
+		r = []
+		r.append(self.column)
+		j = 1
+		ligne = 0
+		caseAjouter = 0
+		while ((ligne * len(self.key)) != len(self.message)):
+			ligne += 1
+
+		for i in range(len(self.key)):
+			tempMessage = ""
+			r.append([])
+			for x in range(ligne-1):
+				tempMessage += self.message[3*i+x]
+			r[j].append(tempMessage)
+			j = j+1
+		print r
+		self.result = []
+		self.result.append([])
+		for x in range(len(self.key)-1):
+			self.result.append([])
+		for x in range(len(self.key)):
+			self.result[int(r[0][x])-1] = r[x+1]
 		print self.result
-	
+		tempMessage = ""
+		for y in range(len(self.key)):
+			for x in range(ligne-1):
+				tempMessage += self.result[y][0][x]
+		self.result = ""
+		for i in range(len(self.key)+3):
+			for x in range(ligne-1):
+				if (i%ligne == 0):
+					self.result += tempMessage[ligne*x]
+				if (i%ligne == 1):
+					self.result += tempMessage[ligne*x+1]
+				if (i%ligne == 2):
+					self.result += tempMessage[ligne*x+2]
+		print self.result
+
+
 	def show(self):
 		print self.result
 
@@ -63,6 +102,6 @@ w = ColumnTransposition("PERMVTAUION", "RENDEZ VOUS A MIDI PLACE DE LA LIBERTE")
 w.encrypt()
 w.show()
 # TEST FOR DECODE #
-#x = ColumnTransposition("1ASB2CT3J4DK5UELV6MF7WHN8XO9PGYQZI0R")
-#x.decrypt()
+x = ColumnTransposition("PERMVTAUION", "VAREIAUEEDIIAE.SD.RMLNDLZLEOCTEPBAA")
+x.decrypt()
 #x.show()
