@@ -16,6 +16,7 @@ class ColumnTransposition(object):
 				complement = complement + "."
 		self.key = key
 		self.message = newMessage + complement
+		print self.message
 		self.column = self.sortAlpha()
 
 	# Marche pas avec deux fois la meme lettre
