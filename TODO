@@ -6,3 +6,10 @@
     _take care how to split better the message regarding the key
     _split and print the cyphered message in randomm sized blocs
 
+- lib :
+    _create alphabet lib
+    _create clean string class (to remove space, return uppered case string and other unsuported format)
+    _create alphabet squares
+
+- Doc :
+    _place docstring comments to describe each lib
