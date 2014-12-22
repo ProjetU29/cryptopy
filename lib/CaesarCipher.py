@@ -30,7 +30,7 @@ class CaesarChipher:
 		tab = []
 		tab.append([])
 		for x in range(len(self.line)):
-			index = (((ord(self.line[x])-64)-self.rotation)%26)
+			index = (((ord(self.line[x])-65)-self.rotation)%26)
 			tab[0].append(self.alphabet[index])
 		self.result = tab
 
@@ -42,6 +42,6 @@ w = CaesarChipher(3,"COLYSEE")
 w.encrypt()
 w.show()
 # TEST FOR DECODE #
-x = CaesarChipher(4,"FROBVHH")
+x = CaesarChipher(8,"BMUXMBM")
 x.decrypt()
 x.show()
