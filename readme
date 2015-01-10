@@ -1,46 +1,25 @@
------------------------------------------------------------------------------
-|                                                                           |
-|                           CRYPTOGRAPHIE ANCIENNE                          |
-|                                                                           |
------------------------------------------------------------------------------
+CryptoPy
+========
 
-Transposition :
-    - Dents de scie
-    - Bloc
-    - Colonnes
-    - UBCHI
-    - Grille de Fleissner
-    - Transposition triangulaire
+It is a Python projet
 
-Substitution :
-    - Code César
-    - Atbash
-    - Le morse
-    - Le carré de Polybe
-    - Code Chappe
-    - Simple clé
-    - Chiffre de Bazeries
-    - Simple
-    - Système d'Alberti
-    - Carré de 25
-    - Renversement desfréquances
-    - Le chiffre de Playfair
-    - Le chiffrement à trois carrés
-    - Chiffre :
-        - Hill
-        - Polux
-        - Collon
-        - Delastelle
-    - Chiffrement ADFGVX
-    - Système :
-        - Porta
-        - Figenere
-        - Beaufort
-        - Gronsfeld
-        - double clé quelconque
-    - Clé variable
+Installation
+------------
 
-Machine de chiffrement :
-    - Cadran d'Alberti
-    - Cylindre de Jefferson
-    - Machine Enigma
+Juste clone this repo or download the master archive in the right panel.
+
+Use
+---
+
+* Windows : python main.py
+
+* Unix : ./main.py
+
+If you want more doc or help, go to the wiki or use the built-in help in main.py.
+
+The wiki contains details about methods, go to the wiki too.
+
+Credits
+-------
+
+Nicolas Le Gall (Darkitty) and Loïck Pelet (peletloick)
